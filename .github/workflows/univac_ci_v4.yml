@@ -1,0 +1,75 @@
+# ==============================================================================
+# UNIVAC IX ENTERPRISE INTERCONNECT CONTINUOUS INTEGRATION CORE
+# ==============================================================================
+name: UNIVAC IX 6-Party Infrastructure Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify-architecture-matrix:
+    runs-on: ubuntu-latest
+    name: Execute Unified Structural Validation Loop
+
+    steps:
+    # --------------------------------------------------------------------------
+    # 1. ENVIRONMENT ISOLATION & VENDOR KEY PROVISIONING
+    # --------------------------------------------------------------------------
+    - name: Checkout Active Source Tree
+      uses: actions/checkout@v4
+
+    - name: Initialize Target Python Environment Layer
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip' # Speeds up subsequent workflow actions runtimes
+
+    - name: Install System Engineering Utilities & OpenSCAD CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends \
+          git \
+          openssh-client \
+          openscad
+
+    # --------------------------------------------------------------------------
+    # 2. DEPENDENCY INGESTION PIPELINE
+    # --------------------------------------------------------------------------
+    - name: Upgrade Platform Package Managers
+      run: python -m pip install --upgrade pip
+
+    - name: Ingest Multi-Party Ecosystem Prerequisites
+      # Installs matrix math engines, plotting tools, and industrial protocols
+      run: pip install -r requirements.txt
+
+    # --------------------------------------------------------------------------
+    # 3. INTERACTIVE RUNTIME HARDENING & GRAPHICS SHIELDING
+    # --------------------------------------------------------------------------
+    - name: Enforce Headless Graphic Engine Environment
+      # Redirects matplotlib rendering outputs straight into memory buffers
+      # to prevent system exceptions during headless virtual container runs.
+      run: |
+        echo "MPLBACKEND=Agg" >> $GITHUB_ENV
+
+    # --------------------------------------------------------------------------
+    # 4. EXPLICIT AUTOMATED COMPILATION CHECKS
+    # --------------------------------------------------------------------------
+    - name: Verify Procedural OpenSCAD Saiya Chassis Mesh Engine
+      run: |
+        if [ -f src/core/generate_saiya_chassis.py ]; then
+          python src/core/generate_saiya_chassis.py
+        else
+          echo "[*] Sandbox compilation skip: Procedural generator file not committed yet."
+        fi
+
+    # --------------------------------------------------------------------------
+    # 5. HIGH-DENSITY REGRESSION MATRIX SUITE
+    # --------------------------------------------------------------------------
+    - name: Execute Unified 6-Corporate Regression Suite via Pytest
+      # Evaluates structural conformity parameters across:
+      # Boeing, Lockheed Martin, Allen-Bradley, MAN, NASA, and Northrop Grumman
+      run: |
+        python -m pytest --tb=short
