@@ -1,0 +1,23 @@
+import pytest
+import os
+from src.core.rollback import CadAutomatedRollbackEngine
+
+def test_automated_hull_discharge_on_failure(tmpdir):
+    # Setup the recovery context
+    engine = CadAutomatedRollbackEngine(workspace_directory=str(tmpdir), crypto_key="DISCHARGE_KEY")
+    filename = "compiled_output.dxf"
+    active_filepath = os.path.join(str(tmpdir), filename)
+    
+    # Initialize a baseline workspace file
+    with open(active_filepath, "w") as f:
+        f.write("NOMINAL_HULL_STATE_VECTORS")
+    engine.checkpoint_current_stable_state(filename)
+    
+    # Assert the system grounding relay is initially unengaged
+    assert engine.hull_charge_grounded is False
+    
+    # Trigger the emergency rescue procedure
+    engine.execute_emergency_rollback(filename)
+    
+    # Verify that the grounding relay loop successfully engaged
+    assert engine.hull_charge_grounded is True
