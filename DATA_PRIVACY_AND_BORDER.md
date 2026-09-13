@@ -71,3 +71,8 @@ To protect aerodynamic curvature algorithms and exterior skin panel composite ma
 - **IP Compartmentalization Rule:** Raw exterior profile logs, CAD component meshes, and deflection parameters must reside strictly within `src/man_powertrain/`.
 - **Aerodynamic Conformity Rule:** Outside panels and surfaces engineered by MAN must mate flush against the form-molded AC Delco gasket housing. Any step-discontinuity, contour variance, or edge gap exceeding **±0.015mm** will instantly trip a security cutoff, blanking viewports to prevent structural IP exposure.
 
+### 11. NASA Space Operations & CCSDS Telemetry Protection
+To defend agency flight parameters, atmospheric metrics, and calibration payloads during multi-party aerospace manufacturing initiatives, the node isolates the NASA telemetry framework:
+- **Authenticated Space Network Gateway:** All cFS logs and CCSDS space packets must route exclusively through `telemetry.nasameas.nasa.gov`.
+- **IP Compartmentalization Rule:** Binary space packet formats, instrumentation dictionaries, and parsing assets must remain strictly inside `src/nasa_ops/`.
+- **Global Conformity Rule:** Airframe components verified by NASA data pipelines must integrate seamlessly within the form-molded AC Delco gasket layout. Any tracking variance exceeding **±0.015mm** will instantly trip a global hardware safe-stop sequence.
