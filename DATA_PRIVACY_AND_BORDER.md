@@ -58,3 +58,9 @@ To protect automated assembly lines and tool calibration parameters during joint
 - **Authenticated Allen-Bradley Domain:** All EtherNet/IP and CIP tag profiles route exclusively through `interface.plc_://allen-bradley.com`.
 - **IP Compartmentalization Rule:** Raw CIP packet response logs and controller tag mappings must reside strictly within `src/ab_automation/`.
 - **Conformity Rule:** Component mounting lines directed by PLC tag arrays must align flawlessly within the form-molded AC Delco gasket boundary housing. If a tag mismatch or structural variance exceeds ±0.015mm, the system instantly executes a hard safety lockout.
+
+### 9. MAN Powertrain & J1939 Network Isolation
+To protect heavy vehicle component schematics and diesel engine mount profiles during joint initiatives, the cluster enforces an explicit perimeter around MAN data transmission channels:
+- **Authenticated MAN Domain:** All J1939 engine bus frames and structural telemetry route exclusively through `interface.fleet_://man.com`.
+- **IP Compartmentalization Rule:** Raw CAN communication packet logs, PGN metadata mappings, and SPN fields must reside strictly within `src/man_powertrain/`.
+- **Conformity Rule:** Heavy machinery bracket mounts directed by MAN controller networks must seat flawlessly into the form-molded AC Delco gasket housing. If a telemetry mismatch or physical variance exceeds ±0.015mm, the assembly auditor will instantly flag a critical halt.
