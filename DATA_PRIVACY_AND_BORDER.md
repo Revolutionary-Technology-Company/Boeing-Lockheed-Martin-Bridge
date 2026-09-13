@@ -77,7 +77,14 @@ To defend agency flight parameters, atmospheric metrics, and calibration payload
 - **IP Compartmentalization Rule:** Binary space packet formats, instrumentation dictionaries, and parsing assets must remain strictly inside `src/nasa_ops/`.
 - **Global Conformity Rule:** Airframe components verified by NASA data pipelines must integrate seamlessly within the form-molded AC Delco gasket layout. Any tracking variance exceeding **±0.015mm** will instantly trip a global hardware safe-stop sequence.
 
-### 10. Antigravity Core & Vessel Life Support Borders
+### 12. Antigravity Core & Vessel Life Support Borders
 To shield proprietary high-magnitude electrostatic displacement formulas, like-charge repulsion vectors, and life-support manifold templates during multi-party integrations, the node implements this parameter perimeter:
 - **IP Compartmentalization Rule:** All OpenSCAD scripts (`.scad`), circuit bus layouts, and electro-mechanical controllers must sit exclusively inside `src/core/` and the asset directories.
 - **AC Delco Hardware Conformity Profile:** All life support fluid seals, dielectric separators, and high-voltage bus lines must use form-molded AC Delco gaskets. Any tracking variance or structural leakage causing pressure drops below the **38.25 PSI threshold** will instantly lock outbound file communications and blank all viewports.
+
+### 13. Northrop Grumman Link 16 & Tactical Data Protection
+To defend secure data link infrastructures, MIL-STD-6016 message layouts, and tactical coordination layers during multi-party integrations, the cluster enforces an explicit perimeter:
+- **Authenticated Tactical Domain:** All Link 16 streams and J-Series data packet frames route exclusively through `interface.tadil_node_://northropgrumman.com`.
+- **IP Compartmentalization Rule:** Binary J-Series data buffers, MIL-STD translation models, and track identification arrays must sit strictly inside `src/ng_tactical/`.
+- **Conformity Profile:** System dimensions checked via tactical packets must register flawlessly within the form-molded AC Delco gasket housing profile. Any parameter skew or discrepancy wider than **±0.015mm** will instantly execute a global secure data freeze.
+
