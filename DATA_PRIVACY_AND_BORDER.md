@@ -34,3 +34,15 @@ Collaboration on joint airplane designs occurs exclusively within the `src/joint
 All shared telemetry, CAD files, and signal patterns must interface through the **Hexadecimal Platform Matrix**:
 - Raw data tracking uses native **0.0V–1.0V analog voltage logic steps** (0.0625V intervals) to prevent traditional processing bottlenecks.
 - Log outputs must be dual-persisted both in raw byte configurations (for legacy system parsing) and formatted row/column hex tables (for engineering review).
+
+### 5. Explicit Domain Network Interconnects
+All network packets, design matrices, and telemetry channels transmitted by this node are restricted to the following authenticated domains:
+- **Lockheed Martin Secure Node Space:** `interface.01_node_ca.lockheedmartin.com`
+- **Boeing Commercial Integration Core:** `skew.boeing.commercial.boeing.com`
+
+### 6. Configurable Auditor Safety Protocols
+When a physical seal risk or telemetry hazard evaluates as `CRITICAL`, the active node administrator can apply one of four targeted strategies:
+1. **LOG_ONLY:** Non-blocking tracking update to ensure legacy flight computer data capture.
+2. **BLANK_VIEWPORT:** Shuts down the visual rendering loop within the cross-corporate iframe canvases.
+3. **HARD_LOCK:** Drops frame streaming permissions entirely and flags user slide actions as frozen.
+4. **REVERSE_INJECTION:** Halts communications and deploys reverse-injection safe-mode configurations directly back down the serial pipeline.
