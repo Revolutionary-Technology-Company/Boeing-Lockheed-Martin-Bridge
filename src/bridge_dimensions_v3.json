@@ -1,0 +1,31 @@
+{
+  "casing_length": 240.0,
+  "casing_width": 160.0,
+  "casing_height": 80.0,
+  "wall_thickness": 5.0,
+  "flange_width": 18.0,
+  "flange_thickness": 8.0,
+  "gasket_width": 4.5,
+  "gasket_depth": 3.0,
+  "bolt_diameter": 6.5,
+  "bolt_count_x": 5,
+  "bolt_count_y": 4,
+  "standoffs": [
+    {"x": -60.0, "y": -40.0, "inner_dia": 3.2, "outer_dia": 10.0, "height": 12.0},
+    {"x":  60.0, "y": -40.0, "inner_dia": 3.2, "outer_dia": 10.0, "height": 12.0},
+    {"x":  60.0, "y":  40.0, "inner_dia": 3.2, "outer_dia": 10.0, "height": 12.0},
+    {"x": -60.0, "y":  40.0, "inner_dia": 3.2, "outer_dia": 10.0, "height": 12.0}
+  ],
+  "hex_signal_schemas": {
+    "UNIVAC_900_BOEING": {
+      "header_sig": "4E5558393030",
+      "data_payload_mask": "FFFFFFFF0000",
+      "trailer_sig": "454E44"
+    },
+    "UNIVAC_955_LOCKHEED": {
+      "header_sig": "544155525553",
+      "data_payload_mask": "0000FFFFFFFF",
+      "trailer_sig": "454E44"
+    }
+  }
+}
