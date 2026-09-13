@@ -1,5 +1,5 @@
 # ==============================================================================
-# UNIVAC IX & AC DELCO ELECTRONICS CORE DEPENDENCIES
+# UNIVAC IX ENTERPRISE RUNTIME DEPENDENCIES
 # ==============================================================================
 
 # Core Mathematical & Processing Matrix Engines
@@ -11,6 +11,10 @@ numba>=0.57.0,<=0.60.0        # Accelerates hot-path physics engines via JIT mul
 pyserial>=3.5                 # Opens native COM/tty hardware serial channels to pull AC Delco bus currents
 pynmea2>=1.18.0               # Decodes raw satellite strings from active hardware elevation modules
 struct>=1.0                   # Low-level binary byte-packing parsing for legacy hardware injections
+
+# Allen-Bradley Industrial Integration Stacks
+pycomm3>=1.2.0                # Handles native EtherNet/IP and CIP tag reading/writing for ControlLogix/CompactLogix
+scapy>=2.5.0                  # Enables low-level network packet sniffing and raw Ethernet frame decoding
 
 # Graphical User Interface & Interactive Cockpit Dashboards
 streamlit>=1.25.0,<=1.40.0    # Powers the interactive desktop mission control panel and visualization toggles
