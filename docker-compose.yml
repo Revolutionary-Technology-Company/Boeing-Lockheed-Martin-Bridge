@@ -1,0 +1,54 @@
+version: '3.8'
+
+x-shared-config: &shared-config
+  build:
+    context: .
+    dockerfile: Dockerfile
+  restart: always
+  volumes:
+    - ./src:/app/src
+    - ./docs:/app/docs
+    - shared_cad_volume:/app/joint_projects
+
+services:
+  # ============================================================================
+  # SANDBOX ENVIRONMENT: Local Validation & Telemetry Mocking
+  # ============================================================================
+  univac-sandbox:
+    <<: *shared-config
+    container_name: univac_ix_sandbox
+    ports:
+      - "8501:8501"  # Streamlit Dashboard GUI Entrypoint
+    environment:
+      - NODE_ENV=sandbox
+      - LOCKHEED_ENDPOINT=http://localhost:8081_mock
+      - BOEING_ENDPOINT=http://localhost:8082_mock
+      - TARGET_GASKET_PRESSURE=45.0
+      - AUDITOR_PROFILE=LOG_ONLY
+    command: ["streamlit", "run", "src/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+  # ============================================================================
+  # PRODUCTION ENVIRONMENT: Hardened Routing & Enforced Domain Boundaries
+  # ============================================================================
+  univac-production:
+    <<: *shared-config
+    container_name: univac_ix_production
+    ports:
+      - "443:8501"  # Route secure port 443 inward directly to core interface
+    environment:
+      - NODE_ENV=production
+      - LOCKHEED_ENDPOINT=https://interface.01_node_://lockheedmartin.com
+      - BOEING_ENDPOINT=https://boeing.com
+      - TARGET_GASKET_PRESSURE=45.0
+      - AUDITOR_PROFILE=HARD_LOCK  # High-security production default fallback
+    # Operational hardening constraints to shield local telemetry execution
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+    command: ["streamlit", "run", "src/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+volumes:
+  shared_cad_volume:
+    name: univac_shared_cad_assets
