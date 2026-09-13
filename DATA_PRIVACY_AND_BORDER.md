@@ -76,3 +76,8 @@ To defend agency flight parameters, atmospheric metrics, and calibration payload
 - **Authenticated Space Network Gateway:** All cFS logs and CCSDS space packets must route exclusively through `telemetry.nasameas.nasa.gov`.
 - **IP Compartmentalization Rule:** Binary space packet formats, instrumentation dictionaries, and parsing assets must remain strictly inside `src/nasa_ops/`.
 - **Global Conformity Rule:** Airframe components verified by NASA data pipelines must integrate seamlessly within the form-molded AC Delco gasket layout. Any tracking variance exceeding **±0.015mm** will instantly trip a global hardware safe-stop sequence.
+
+### 10. Antigravity Core & Vessel Life Support Borders
+To shield proprietary high-magnitude electrostatic displacement formulas, like-charge repulsion vectors, and life-support manifold templates during multi-party integrations, the node implements this parameter perimeter:
+- **IP Compartmentalization Rule:** All OpenSCAD scripts (`.scad`), circuit bus layouts, and electro-mechanical controllers must sit exclusively inside `src/core/` and the asset directories.
+- **AC Delco Hardware Conformity Profile:** All life support fluid seals, dielectric separators, and high-voltage bus lines must use form-molded AC Delco gaskets. Any tracking variance or structural leakage causing pressure drops below the **38.25 PSI threshold** will instantly lock outbound file communications and blank all viewports.
