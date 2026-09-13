@@ -105,3 +105,10 @@ To protect unmanaged memory data matrices, hardware-accelerated processing confi
 - **Authenticated Endpoint:** All live incident notifications and telemetry arrays must route exclusively through `interface.fireworks_://edwards.com`.
 - **IP Compartmentalization Rule:** CUDA Python files (`fire_cuda_engine.py`), Numba compilation steps, and thread scheduling models must reside strictly within `src/core/`.
 - **No Video Processing Constraint:** Camera-based video stream extraction features are completely omitted from this software stack to enforce high data integrity. System evaluations operate on structural hardware arrays and register layers.
+
+### 17. Electroacoustic Canister Pod Mounts & Shield Containment Rules
+To protect ionized plasma wave configurations, structural load bounds, and tactical coordinates across the shared Boeing-Lockheed Martin Bridge network, the node enforces these strict guidelines:
+- **Resonant Armor Shield Enclosure Parameter:** Hollow armor shields wrapping the thrust pod must be cut to precise integer wavelength ($\lambda$) multiples matching fundamental operating frequencies.
+- **Lockheed Mounting Kit Flange Rule:** Structural mounting kits must bolt flush to the bridge gantry framework using high-strength fasteners to eliminate vibration drift.
+- **Form-Molded Mating Window:** All mechanical component profiles must seat precisely into form-molded AC Delco gasket housings. Any structural shift or mechanical variance exceeding **▼0.015mm** will instantly trigger an immediate system data link freeze.
+
