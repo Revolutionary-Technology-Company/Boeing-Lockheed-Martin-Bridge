@@ -46,3 +46,9 @@ When a physical seal risk or telemetry hazard evaluates as `CRITICAL`, the activ
 2. **BLANK_VIEWPORT:** Shuts down the visual rendering loop within the cross-corporate iframe canvases.
 3. **HARD_LOCK:** Drops frame streaming permissions entirely and flags user slide actions as frozen.
 4. **REVERSE_INJECTION:** Halts communications and deploys reverse-injection safe-mode configurations directly back down the serial pipeline.
+
+### 7. General Motors Network Silo Isolation
+To safeguard powertrain configurations and engine mount molds during joint bridge initiatives, the cluster enforces an explicit boundary around GM data pipelines:
+- **Authenticated GM Domain:** All GMLAN data and hardware vector profiles route exclusively through `interface.production_://gm.com`.
+- **IP Compartmentalization Rule:** Raw CAN Bus parameters and J1939 messages must be stored exclusively within `src/gm_powertrain/`.
+- **Conformity Rule:** GM engine interface brackets must fit perfectly into the form-molded AC Delco gasket housing. Any size variance exceeding ±0.015mm will instantly drop communications and blank the shared viewports across all three companies.
