@@ -64,3 +64,10 @@ To protect heavy vehicle component schematics and diesel engine mount profiles d
 - **Authenticated MAN Domain:** All J1939 engine bus frames and structural telemetry route exclusively through `interface.fleet_://man.com`.
 - **IP Compartmentalization Rule:** Raw CAN communication packet logs, PGN metadata mappings, and SPN fields must reside strictly within `src/man_powertrain/`.
 - **Conformity Rule:** Heavy machinery bracket mounts directed by MAN controller networks must seat flawlessly into the form-molded AC Delco gasket housing. If a telemetry mismatch or physical variance exceeds ±0.015mm, the assembly auditor will instantly flag a critical halt.
+
+### 10. MAN External Panels & Surface Geometry Isolation
+To protect aerodynamic curvature algorithms and exterior skin panel composite matrix specs during joint manufacturing initiatives, the cluster enforces an explicit boundary:
+- **Authenticated MAN Domain:** All J1939 surface panel telemetry and coordinate streams route exclusively through `interface.fleet_://man.com`.
+- **IP Compartmentalization Rule:** Raw exterior profile logs, CAD component meshes, and deflection parameters must reside strictly within `src/man_powertrain/`.
+- **Aerodynamic Conformity Rule:** Outside panels and surfaces engineered by MAN must mate flush against the form-molded AC Delco gasket housing. Any step-discontinuity, contour variance, or edge gap exceeding **±0.015mm** will instantly trip a security cutoff, blanking viewports to prevent structural IP exposure.
+
