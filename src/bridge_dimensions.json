@@ -1,0 +1,16 @@
+{
+  "casing_length": 240.0,
+  "casing_width": 160.0,
+  "casing_height": 80.0,
+  "wall_thickness": 5.0,
+  "flange_width": 18.0,
+  "flange_thickness": 8.0,
+  "gasket_width": 4.5,
+  "gasket_depth": 3.0,
+  "bolt_diameter": 6.5,
+  "bolt_count_x": 5,
+  "bolt_count_y": 4,
+  "boss_height": 12.0,
+  "boss_outer_dia": 10.0,
+  "boss_inner_dia": 3.2
+}
