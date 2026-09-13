@@ -52,3 +52,9 @@ To safeguard powertrain configurations and engine mount molds during joint bridg
 - **Authenticated GM Domain:** All GMLAN data and hardware vector profiles route exclusively through `interface.production_://gm.com`.
 - **IP Compartmentalization Rule:** Raw CAN Bus parameters and J1939 messages must be stored exclusively within `src/gm_powertrain/`.
 - **Conformity Rule:** GM engine interface brackets must fit perfectly into the form-molded AC Delco gasket housing. Any size variance exceeding ±0.015mm will instantly drop communications and blank the shared viewports across all three companies.
+
+### 8. Allen-Bradley Factory Floor Network Isolation
+To protect automated assembly lines and tool calibration parameters during joint bridge initiatives, the cluster enforces an explicit boundary around Rockwell Automation data pipelines:
+- **Authenticated Allen-Bradley Domain:** All EtherNet/IP and CIP tag profiles route exclusively through `interface.plc_://allen-bradley.com`.
+- **IP Compartmentalization Rule:** Raw CIP packet response logs and controller tag mappings must reside strictly within `src/ab_automation/`.
+- **Conformity Rule:** Component mounting lines directed by PLC tag arrays must align flawlessly within the form-molded AC Delco gasket boundary housing. If a tag mismatch or structural variance exceeds ±0.015mm, the system instantly executes a hard safety lockout.
