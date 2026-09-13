@@ -9,3 +9,28 @@ All operational billing, financial transactions, and compliance-related complain
 
 ## 3. Cross-Border Data Transfers
 For software updates pushed to international hospital networks, data handling complies with localized jurisdiction laws (e.g., HIPAA/HITECH in the United States, GDPR in the European Union). Fox Rothschild LLP serves as the primary legal point of contact for all regulatory data inquiries, compliance audits, and legal notices regarding cross-border software telemetry.
+
+# DATA PRIVACY AND REPOSITORY BORDER POLICY
+
+This governance document establishes the operational boundaries, IP protection schemas, and validation requirements for collaborative aerospace projects running on the **UNIVAC IX Core Fabric**.
+
+## 1. Corporate Sovereignty & Silo Boundaries
+- **Boeing Proprietary Data:** All specifications, layouts, and logic arrays optimized for the **UNIVAC 900 Cisco Router 8300** must reside strictly inside `src/boeing_airframe/`.
+- **Lockheed Martin Proprietary Data:** All tactical schemas and fleet parameters optimized for the **Univac 955 Taurus Fleet Command Athena** must reside strictly inside `src/lockheed_avionics/`.
+- Cross-directory unauthorized reading or writing across corporate boundary folders is strictly forbidden at the infrastructure level.
+
+## 2. Shared Network & Auditing Core
+Collaboration on joint airplane designs occurs exclusively within the `src/joint_assembly/` ecosystem under these parameters:
+1. **Dual-Sign Cryptographic Handshake:** No joint workspace directory can be established or accessed without valid, non-repudiated electronic authorization keys supplied by both companies simultaneously.
+2. **Automated NDA Gating:** The creation of any collaborative resource instantly injects an unmodifiable `LICENSE_NDA.md` security ledger. 
+3. **Continuous Heuristic Inspection:** Integrated runtime loops scan incoming packets for behavioral and physical warning tags (`CRITICAL`, `BREAKDOWN`). 
+
+## 3. Physical Containment & Structural Conformity
+- To counteract volatile, unstable snap-in modular errors, all physical components must conform exactly to **form-molded specifications**.
+- Mechanical enclosures must mount flush to the authorized **AC Delco hardware gasket footprint**, maintaining optimized compression seals.
+- Any network node displaying physical pressure degradation will trigger a structural exception loop, issuing high-priority terminal alerts (`\a`) and reverse-injecting safe-mode recovery code straight into active devices.
+
+## 4. Hardware Verification & Data Formats
+All shared telemetry, CAD files, and signal patterns must interface through the **Hexadecimal Platform Matrix**:
+- Raw data tracking uses native **0.0V–1.0V analog voltage logic steps** (0.0625V intervals) to prevent traditional processing bottlenecks.
+- Log outputs must be dual-persisted both in raw byte configurations (for legacy system parsing) and formatted row/column hex tables (for engineering review).
