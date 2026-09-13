@@ -99,3 +99,9 @@ To protect proprietary magnetic electron force formulas, static charge potential
 - **Authenticated Endpoints:** All field calibration logs and multi-party alignment vectors must route exclusively through `://boeing.com` and `interface.01_node_://lockheedmartin.com`.
 - **IP Compartmentalization Rule:** Gravity potential models, spatial interpolation matrices, and plate differential constants must sit strictly within `src/core/` and dedicated environmental paths.
 - **AC Delco Hardware Conformity Profile:** Dielectric separator brackets and isolation standoffs wrapping the structural armor plates must use form-molded AC Delco constraints. Any tracking variance or structural leakage causing pressure or charge fields to drop below the mandatory **85% operational efficiency threshold** will instantly lock communications and blank all viewports.
+
+### 16. FireWatch GPU Processing & Edwards Platform Boundaries
+To protect unmanaged memory data matrices, hardware-accelerated processing configurations, and serial communications during joint initiatives, the node isolates the computing matrix:
+- **Authenticated Endpoint:** All live incident notifications and telemetry arrays must route exclusively through `interface.fireworks_://edwards.com`.
+- **IP Compartmentalization Rule:** CUDA Python files (`fire_cuda_engine.py`), Numba compilation steps, and thread scheduling models must reside strictly within `src/core/`.
+- **No Video Processing Constraint:** Camera-based video stream extraction features are completely omitted from this software stack to enforce high data integrity. System evaluations operate on structural hardware arrays and register layers.
