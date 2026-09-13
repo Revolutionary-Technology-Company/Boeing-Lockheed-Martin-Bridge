@@ -1,0 +1,12 @@
+  univac-production:
+    image: univac_ix_aerospace_bridge:latest
+    container_name: univac_ix_production
+    environment:
+      - NODE_ENV=production
+      - LOCKHEED_ENDPOINT=https://interface.01_node_://lockheedmartin.com
+      - BOEING_ENDPOINT=https://boeing.com
+      - GM_ENDPOINT=https://interface.production_matrix.gm.com
+      - AUDITOR_PROFILE=HARD_LOCK
+    ports:
+      - "443:8501"
+    restart: always
